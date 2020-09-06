@@ -127,9 +127,12 @@ def plot_and_save(X, Y, stdev, xlabel, ylabel, filename, standard=None):
     plt.gcf().set_size_inches(15, 7)
 
     plt.plot(X, Y, 'o-')
+
     if standard is not None:
         plt.hlines(standard, X[0], X[-1], color='r')
-    plt.fill_between(X, [Y[i]-stdev[i] for i in range(len(Y))], [Y[i]+stdev[i] for i in range(len(Y))], alpha=0.1)
+
+    plt.fill_between(X, [Y[i]-stdev[i] for i in range(len(Y))],
+                    [Y[i]+stdev[i] for i in range(len(Y))], alpha=0.1)
 
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
