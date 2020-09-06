@@ -1,7 +1,5 @@
 import matplotlib.pyplot as plt
 import pandas as pd
-import math, pickle
-from numpy import mean, std
 from datetime import datetime, timedelta, time
 
 
@@ -138,19 +136,6 @@ def plot_and_save(X, Y, stdev, xlabel, ylabel, filename, standard=None):
 
     plt.savefig(filename)
     plt.clf()
-
-
-def plot_all(means, standards, filenames):
-    """..."""
-    for key in means.keys():
-        X = []
-        Y = []
-        standard = standards[key]
-        for date in means[key].keys():
-            X.append(date[6:])
-            Y.append(means[key][date])
-        filename = 'DAY ' + key.split()[0] + (key.split()[1].replace('.', '') if key.split()[0]=='PM' else '')
-        plot_and_save(X, Y, 'Date', key, filename, standard)
 
 
 def find_hour_day(s, schedule, lective_days):
