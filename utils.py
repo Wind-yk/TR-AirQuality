@@ -111,7 +111,10 @@ def get_lective_dates(start, end, step=1):
 
 
 def get_lective_data(path):
-    """..."""
+    """
+    Get all the lective data from `path`.
+    Returns the labels and the data as list.
+    """
     with open(path, 'r', encoding="UTF-8") as f:
         df = pd.read_csv(f)
         labels = list(df.columns)
@@ -123,7 +126,7 @@ def get_lective_data(path):
 
 
 def plot_and_save(X, Y, stdev, xlabel, ylabel, filename, standard=None):
-    """..."""
+    """Save the file as required."""
     plt.gcf().set_size_inches(15, 7)
 
     plt.plot(X, Y, 'o-')
@@ -142,7 +145,10 @@ def plot_and_save(X, Y, stdev, xlabel, ylabel, filename, standard=None):
 
 
 def find_hour_day(s, schedule, lective_days):
-    """..."""
+    """
+    Given the `schedule` and the `lective_days`,
+    return the class and the day of a string date `s`.
+    """
     dt = to_datetime(s[:16])
     hour = dt.time()
     day = dt.weekday()
