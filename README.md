@@ -12,8 +12,8 @@
   There are two `.csv` files (not in this repository), containing outdoor and indoor air quality data for 4 weeks, respectively.
   
   The aim is twofold:
-     * to generate comparison plots for indoor and outdoor data for each defined parameter by weeks, such as `PM10` or `eCO2` concentracions.
-     * to generate concentration tables defined by the schedule of high school; i.e. for each lesson, the respective concentration.
+  * to generate comparison plots for indoor and outdoor data for each defined parameter by weeks, such as `PM10` or `eCO2` concentracions.
+  * to generate concentration tables defined by the schedule of high school; i.e. for each lesson, the respective concentration.
      
   These plots and tables are generated for further analysis.
      
